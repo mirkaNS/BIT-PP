@@ -197,3 +197,50 @@ function pen(a, b) {
 }
 
 console.log(pen(1980, "f"));
+
+
+function insertElement(array, element, position) {
+    position = position || 0;
+    if (array.length < 1 || !element) {
+        return array;
+    }
+
+    if (position => array.length) {
+        console.log("Index out of bounds.");
+        return array;
+    }
+
+    var newArray = [];
+    for (var i = 0, j = 0; i < array.length; i++) {
+        if (i === position) {
+            newArray[j] = element;
+            newArray[j + 1] = array[i];
+            j += 2;
+        } else {
+            newArray[j] = array[i];
+            j++;
+        }
+    }
+    return newArray;
+}
+
+var element = 78;
+var position = 3;
+var array = [2, -2, 33, 12, 5, 8];
+var output = insertElement(array, element, position);
+
+console.log(output);
+
+
+
+function nekatamo(a, e, p) {
+    if (p > a.length) {
+        return console.log("error")
+    }
+    else {
+        a[p] = e;
+    }
+    return a
+}
+console.log(nekatamo([2, -2, 33, 12, 5, 8], 8989898989, 0));
+
