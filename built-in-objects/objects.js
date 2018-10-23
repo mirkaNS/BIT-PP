@@ -168,10 +168,32 @@ function abbreviated(word) {
 console.log(abbreviated("John Snow"));
 
 
-/*Write a function that can pad (left, right) a string to get to a determined length.
+/* 7. Write a function that can pad (left, right) a string to get to a determined length.
 
 	'0000', 123, 'l' -> 0123 
 '00000000', 123, 'r' -> 12300000 */
+
+function determinedLength(string, number, leftRight) {
+    var numb2str = number.toString();
+    var len = numb2str.length;
+    var final = '';
+
+    if (leftRight == "left") {
+        final = string.slice(0, string.length - len) + number;
+
+    }
+    if (leftRight == "right") {
+        final = number + string.slice(len, string.length);
+
+    }
+
+    return final;
+
+
+}
+
+console.log(determinedLength('0000', 123, 'right'));
+
 
 
 
@@ -195,4 +217,49 @@ console.log(capitalizeFirstLetter("js string exercises"));
 
 "somerandomaddress@example.com" -> "somerand...@example.com"*/
 
+function hideEmail(email) {
+    var finde = email.indexOf("@");
+    var result = email.slice(0, finde - 3);
+    var secondPart = email.slice(finde);
+    var final = result + '...' + secondPart;
+    return final;
+}
+console.log(hideEmail("mirjana.g90@gmai.com"));
 
+
+
+//10.Write a program that accepts a string as input and swaps the case of each character. For example, if you input 'The Quick Brown Fox', the output should be 'tHE qUICK bROWN fOX'.
+//var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+//var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+
+//"The Quick Brown Fox" -> "tHE qUICK bROWN fOX"
+
+function upperLower(string) {
+
+    var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    var newLowerUppr = "";
+
+
+    for (var i = 0; i < string.length; i++) {
+
+        if (UPPER.indexOf(string[i]) != -1) {
+            newLowerUppr += string[i].toLowerCase();
+
+        }
+        else {
+            if (LOWER.indexOf(string[i]) != -1) {
+                newLowerUppr += string[i].toUpperCase();
+
+            }
+            else {
+                newLowerUppr += string[i];
+            }
+        }
+
+    }
+
+    return newLowerUppr;
+}
+
+console.log(upperLower("The Quick Brown Fox"));
