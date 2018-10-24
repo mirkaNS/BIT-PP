@@ -9,9 +9,8 @@ function secondCharacter(string1) {
         for (var i = 1; i < string1.length; i = i + 2) {
             string2[counter] = string1[i];
             counter++;
-
         }
     }
     return string2;
 }
-console.log(secondCharacter("it"));
+console.log(secondCharacter("itmiki"));
