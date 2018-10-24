@@ -25,10 +25,19 @@ Output: [1, 4, 8, 9, 12, 13]
 
 
 function removesAllDuplicates(array) {
-    var arraySort = array.sort();
-    console.log(arraySort);
+    var newArray = [];
+    var counter = 0;
+    var arraySort = array.sort(function (element1, element2) {
+        return element1 - element2;
+    })
+    for (var i = 0, j = 1; i < arraySort.length, j <= arraySort.length; i++ , j++) {
+        if (arraySort[i] != arraySort[j]) {
+            newArray[counter] = arraySort[i];
+            counter++;
+        }
+    }
+    return newArray;
 }
-
 console.log(removesAllDuplicates([8, 13, 8, 9, 12, 8, 1, 1, 4, 13]));
 
 
@@ -44,12 +53,30 @@ console.log(removesAllDuplicates([8, 13, 8, 9, 12, 8, 1, 1, 4, 13]));
 
 
 function odd(array) {
+    a
 
-    for (var i = 0; i < array.length; i++) {
-        if (array[i] % 2 == 0) {
-
-        }
-    }
 }
 console.log(odd([1, 2, 9, 2, 1]));
 
+
+/*5a
+Write a function that finds all the elements in a given array less than a given element. 
+Input: [2, 3, 8, -2, 11, 4], 6 
+Output: [2, 3, -2, 4] */
+function ElLessThanGiven(array, number) {
+
+    var newArray = array.sort(function (el1, el2) {
+        return el1 - el2
+    });
+    for (var i = 0; i < array.length; i++) {
+
+        if (array[i] < number) {
+
+
+        }
+    }
+
+
+    return newArray;
+}
+console.log(ElLessThanGiven([2, 3, 8, -2, 11, 4], 6));
