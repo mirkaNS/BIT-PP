@@ -65,17 +65,34 @@ console.log(deletesSecondElement([3, 5, 1, 8, 90, -4, 23, 1, 67]));
 //6.Write a function that replaces the elements of the given array between two positions with their doubled values. 
 //Input: [3, 5, 1, 8, 90, -4, 23, 1, 67], 2, 6 
 //Output: [3, 5, 2, 16, 180, -8, 46, 1, 67]
-
+//a 
 function replacesWhitDoubledValues(array, index, index2) {
-    result = [];
-    for (var i = 0; i < array.length; i++) {
-        result = array.slice(index, index2);
-        var newResult = r
+
+    for (var i = index; i <= index2; i++) {
+        array.splice(i, 1, array[i] * 2);
+
     }
-    return newResult;
+    return array;
 }
 console.log(replacesWhitDoubledValues([3, 5, 1, 8, 90, -4, 23, 1, 67], 2, 6));
 
 
+//b
+function replacesWhitDoubledValues(array, index, index2) {
 
+    var firstPart = array.slice(0, index);
+    var secondPart = array.slice(index2);
+    var final;
+    var j;
+    newArray = [];
+
+    for (var i = index; i <= index2; i++) {
+        newArray[j] = array[i] * 2;
+        j++;
+
+    }
+    //   final = 
+    //return array;
+}
+console.log(replacesWhitDoubledValues([3, 5, 1, 8, 90, -4, 23, 1, 67], 2, 6));
 
