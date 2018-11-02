@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <h1>Movie Festival</h1>
+    <form>
+        <label>
+
+            Title
+            <br>
+            <input id='title' type="text" placeholder="Title">
+        </label>
+        <br>
+        <label>
+            Length (min)
+            <br>
+            <input id='length' type="number" placeholder="Length in min">
+        </label>
+        <br>
+        <select id="genre">
+            <option value="action">Action</option>
+            <option value="crime">Crime</option>
+            <option value="drama">Drama</option>
+            <option value="horor">Horor</option>
+            <option value="comedy">Comedy</option>
+            <option value="romance">Romance</option>
+        </select>
+        <br>
+        <button type="button" id="createMovie">Create movie</button>
+        <ul class='list-group list-group-flush' id='movieList'>
+
+        </ul>
+    </form>
+
+    <script src="./entities.js"></script>
+    <script src="./form.js"></script>
+</body>
+
+</html>

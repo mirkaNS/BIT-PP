@@ -6,10 +6,11 @@
         function Person(name, surname) {
             this.name = name;
             this.surname = surname;
-            this.getData = function () {
-                return this.name + " " + this.surname;
-            }
         }
+        Person.prototype.getData = function () {
+            return this.name + " " + this.surname;
+        }
+
         function Seat(number, category) {
             this.number = (function () {
                 if (number == "") {
@@ -28,19 +29,17 @@
                 }
 
             })();
-
-            this.getData = function () {
-                return this.number + ", " + this.category.toUpperCase();
-            }
         }
-
+        Seat.prototype.getData = function () {
+            return this.number + ", " + this.category.toUpperCase();
+        }
 
         function Passenger(person, seat) {
             this.person = person;
             this.seat = seat;
-            this.getData = function () {
-                return this.seat.getData() + ", " + this.person.getData();
-            }
+        }
+        Passenger.prototype.getData = function () {
+            return this.seat.getData() + ", " + this.person.getData();
         }
 
         function Flight(passanger, relation, date) {
@@ -48,12 +47,11 @@
             this.relation = relation;
             this.date = date;
             this.passangerList = [];
-            this.addPassanger = function (passanger) {
-                var passangerFlight = passanger.getData();
-                this.passangerList.push(passangerFlight);
-                return this.passangerList;
-            }
-
+        }
+        Flight.prototype.addPassanger = function (passanger) {
+            var passangerFlight = passanger.getData();
+            this.passangerList.push(passangerFlight);
+            return this.passangerList;
         }
 
         function Airport(name) {
