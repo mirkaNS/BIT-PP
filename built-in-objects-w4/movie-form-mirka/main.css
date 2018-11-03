@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.content {
+    width: 100%;
+    border: 1px solid black;
+    margin: auto 20px;
+}
+
+p {
+    margin-left: 20px;
+}
+
+form {
+    border: 1px solid black;
+    margin: auto 20px;
+}
+
+label {
+    margin: auto 10px;
+}
+
+input {
+    margin: auto 10px;
+}
+
+select {
+    width: 90%;
+    margin: auto 20px;
+}
+
+#button {
+    background: rgb(34, 143, 34);
+    width: 90%;
+    margin: 20px;
+    color: gainsboro;
+}
